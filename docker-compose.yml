@@ -1,0 +1,11 @@
+services:
+  app:
+    # Constrói a imagem a partir do Dockerfile no diretório atual.
+    # Funciona perfeitamente com o Dockerfile que você forneceu.
+    build: .
+    container_name: 7790f51dbff20e88f5c6b51b0983b7513e5f449eca1e6b9e6abde08b6b159fe6
+    ports:
+      - "8000:8000"
+    # Monta o diretório atual no contêiner para desenvolvimento ao vivo.
+    volumes:
+      - .:/app
